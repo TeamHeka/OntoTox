@@ -1,0 +1,1859 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://OntoTox.owl"
+         xmlns="http://OntoTox.owl#"
+         xmlns:prov="http://www.w3.org/ns/prov#">
+
+<owl:Ontology rdf:about="http://OntoTox.owl"/>
+
+<owl:ObjectProperty rdf:about="#hasGrade">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="#Grade"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#associatedWithTreatment">
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="#Drug"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasRelativeStartDate">
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="#RelativeStartDate"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasAbsoluteStartDate">
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="#AbsoluteStartDate"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isRelatedToPatient">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="#Patient"/>
+  <owl:inverseOf rdf:resource="#isAffectedBy"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isAffectedBy">
+  <rdfs:domain rdf:resource="#Patient"/>
+  <rdfs:range rdf:resource="#ChemotherapyToxicity"/>
+  <owl:inverseOf rdf:resource="#isRelatedToPatient"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#isHypothetical">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#isNegative">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#concernsPatient">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasValueInText">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasValueInQST">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasValueInTable">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#ChemotherapyToxicity">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Grade">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Drug">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RelativeStartDate">
+  <rdfs:subClassOf rdf:resource="#StartDate"/>
+  <owl:disjointWith rdf:resource="#AbsoluteStartDate"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AbsoluteStartDate">
+  <rdfs:subClassOf rdf:resource="#StartDate"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Patient">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#StartDate">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Grade0">
+  <rdfs:subClassOf rdf:resource="#Grade"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Grade1">
+  <rdfs:subClassOf rdf:resource="#Grade"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Grade2">
+  <rdfs:subClassOf rdf:resource="#Grade"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Grade3">
+  <rdfs:subClassOf rdf:resource="#Grade"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Grade4">
+  <rdfs:subClassOf rdf:resource="#Grade"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Grade5">
+  <rdfs:subClassOf rdf:resource="#Grade"/>
+</owl:Class>
+
+<owl:Class rdf:about="#GradeNull">
+  <rdfs:subClassOf rdf:resource="#Grade"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Qualifier">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FreeText">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ProcessFreeText">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+</owl:Class>
+
+<owl:Class rdf:about="#process_free_text20210601-160903">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+      <owl:someValuesFrom rdf:resource="#ProcessFreeText"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+      <owl:hasValue rdf:resource="#FT_2222222222"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+      <owl:hasValue rdf:resource="#FT_1111111111"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+      <owl:hasValue rdf:resource="#FT_4444444444"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+      <owl:hasValue rdf:resource="#FT_3333333333"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#DOC_2222222222">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DOC_1111111111">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DOC_4444444444">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DOC_3333333333">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Tables">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ProcessTables">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+</owl:Class>
+
+<owl:Class rdf:about="#process_tables20210601-160938">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+      <owl:someValuesFrom rdf:resource="#ProcessTables"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+      <owl:hasValue rdf:resource="#table_1111111111_1"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+      <owl:hasValue rdf:resource="#table_3333333333_1"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#QST_answer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ProcessQST">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+</owl:Class>
+
+<owl:Class rdf:about="#process_qst20210601-161013">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+      <owl:someValuesFrom rdf:resource="#ProcessQST"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+      <owl:hasValue rdf:resource="#QST_QST:QN_11111_0"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+      <owl:hasValue rdf:resource="#QST_QST:QN_22222_1"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+      <owl:hasValue rdf:resource="#QST_QST:QN_33333_2"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+      <owl:hasValue rdf:resource="#QST_QST:QN_44444_3"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+      <owl:hasValue rdf:resource="#QST_QST:QN_55555_4"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+      <owl:hasValue rdf:resource="#QST_QST:QN_66666_5"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+      <owl:hasValue rdf:resource="#QST_QST:QN_11111_6"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+      <owl:hasValue rdf:resource="#QST_QST:QN_22222_7"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+      <owl:hasValue rdf:resource="#QST_QST:QN_33333_8"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+      <owl:hasValue rdf:resource="#QST_QST:QN_44444_9"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+      <owl:hasValue rdf:resource="#QST_QST:QN_55555_10"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+      <owl:hasValue rdf:resource="#QST_QST:QN_66666_11"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#QST_QST:QN_11111">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+      <owl:someValuesFrom rdf:resource="#QST_PROCHE"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#QST_PROCHE">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+</owl:Class>
+
+<owl:Class rdf:about="#QST_QST:QN_22222">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+      <owl:someValuesFrom rdf:resource="#QST_PROCHE"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#QST_QST:QN_33333">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+      <owl:someValuesFrom rdf:resource="#QST_PROCHE"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#QST_QST:QN_44444">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+      <owl:someValuesFrom rdf:resource="#QST_PROCHE"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#QST_QST:QN_55555">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+      <owl:someValuesFrom rdf:resource="#QST_PROCHE"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#QST_QST:QN_66666">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+      <owl:someValuesFrom rdf:resource="#QST_PROCHE"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<FreeText rdf:about="#FT_2222222222">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#process_free_text20210601-160903"/>
+    </owl:Restriction>
+  </rdf:type>
+  <prov:wasDerivedFrom rdf:resource="#DOC_2222222222"/>
+</FreeText>
+
+<FreeText rdf:about="#FT_1111111111">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#process_free_text20210601-160903"/>
+    </owl:Restriction>
+  </rdf:type>
+  <prov:wasDerivedFrom rdf:resource="#DOC_1111111111"/>
+</FreeText>
+
+<FreeText rdf:about="#FT_4444444444">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#process_free_text20210601-160903"/>
+    </owl:Restriction>
+  </rdf:type>
+  <prov:wasDerivedFrom rdf:resource="#DOC_4444444444"/>
+</FreeText>
+
+<FreeText rdf:about="#FT_3333333333">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#process_free_text20210601-160903"/>
+    </owl:Restriction>
+  </rdf:type>
+  <prov:wasDerivedFrom rdf:resource="#DOC_3333333333"/>
+</FreeText>
+
+<Tables rdf:about="#table_1111111111_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#process_tables20210601-160938"/>
+    </owl:Restriction>
+  </rdf:type>
+  <prov:wasDerivedFrom rdf:resource="#DOC_1111111111"/>
+</Tables>
+
+<Tables rdf:about="#table_3333333333_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#process_tables20210601-160938"/>
+    </owl:Restriction>
+  </rdf:type>
+  <prov:wasDerivedFrom rdf:resource="#DOC_3333333333"/>
+</Tables>
+
+<Patient rdf:about="#2222222222">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Patient>
+
+<AbsoluteStartDate rdf:about="#2018-07-09">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AbsoluteStartDate>
+
+<ChemotherapyToxicity rdf:about="#abf0f2ae-c2f3-11eb-8718-0242ac110002">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0014868"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10030216"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation1"/>
+  <hasAbsoluteStartDate rdf:resource="#2018-07-09"/>
+  <isRelatedToPatient rdf:resource="#2222222222"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oesophagite</rdfs:label>
+  <isHypothetical rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isHypothetical>
+  <isNegative rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isNegative>
+  <concernsPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</concernsPatient>
+  <hasValueInText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oesophagite</hasValueInText>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_free_text20210601-160903"/>
+  <prov:influencer rdf:resource="#FT_2222222222"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#abf1e330-c2f3-11eb-8718-0242ac110002">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0040034"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10043555"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation2"/>
+  <hasAbsoluteStartDate rdf:resource="#2018-07-09"/>
+  <isRelatedToPatient rdf:resource="#2222222222"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thrombopénie</rdfs:label>
+  <isHypothetical rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isHypothetical>
+  <isNegative rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isNegative>
+  <concernsPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</concernsPatient>
+  <hasValueInText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thrombopénie</hasValueInText>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_free_text20210601-160903"/>
+  <prov:influencer rdf:resource="#FT_2222222222"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#abf3931a-c2f3-11eb-8718-0242ac110002">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0002170"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10004082"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation3"/>
+  <hasAbsoluteStartDate rdf:resource="#2018-07-09"/>
+  <isRelatedToPatient rdf:resource="#2222222222"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alopécie</rdfs:label>
+  <isHypothetical rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isHypothetical>
+  <isNegative rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isNegative>
+  <concernsPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</concernsPatient>
+  <hasValueInText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alopécie</hasValueInText>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_free_text20210601-160903"/>
+  <prov:influencer rdf:resource="#FT_2222222222"/>
+</prov:Generation>
+
+<Patient rdf:about="#1111111111">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Patient>
+
+<AbsoluteStartDate rdf:about="#2016-07-17">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AbsoluteStartDate>
+
+<ChemotherapyToxicity rdf:about="#abf66e0a-c2f3-11eb-8718-0242ac110002">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C1262477"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10024883"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation4"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-07-17"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">perte de poids</rdfs:label>
+  <isHypothetical rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isHypothetical>
+  <isNegative rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isNegative>
+  <concernsPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</concernsPatient>
+  <hasValueInText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">perte de poids</hasValueInText>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_free_text20210601-160903"/>
+  <prov:influencer rdf:resource="#FT_1111111111"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#abf78466-c2f3-11eb-8718-0242ac110002">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0013362"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10013887"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation5"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-07-17"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dysarthrie</rdfs:label>
+  <isHypothetical rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isHypothetical>
+  <isNegative rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isNegative>
+  <concernsPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</concernsPatient>
+  <hasValueInText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dysarthrie</hasValueInText>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_free_text20210601-160903"/>
+  <prov:influencer rdf:resource="#FT_1111111111"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#abf9b4ca-c2f3-11eb-8718-0242ac110002">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0010200"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10011224"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation6"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-07-17"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">toux</rdfs:label>
+  <isHypothetical rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isHypothetical>
+  <isNegative rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isNegative>
+  <concernsPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</concernsPatient>
+  <hasValueInText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">toux</hasValueInText>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_free_text20210601-160903"/>
+  <prov:influencer rdf:resource="#FT_1111111111"/>
+</prov:Generation>
+
+<AbsoluteStartDate rdf:about="#2016-09-01">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AbsoluteStartDate>
+
+<ChemotherapyToxicity rdf:about="#abfb3cbe-c2f3-11eb-8718-0242ac110002">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0040053"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10043628"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation7"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-09-01"/>
+  <isRelatedToPatient rdf:resource="#2222222222"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thrombose</rdfs:label>
+  <isHypothetical rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isHypothetical>
+  <isNegative rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isNegative>
+  <concernsPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</concernsPatient>
+  <hasValueInText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thrombose</hasValueInText>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_free_text20210601-160903"/>
+  <prov:influencer rdf:resource="#FT_4444444444"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#abfc50ea-c2f3-11eb-8718-0242ac110002">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0002871"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10002034"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation8"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-09-01"/>
+  <isRelatedToPatient rdf:resource="#2222222222"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anémie</rdfs:label>
+  <isHypothetical rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isHypothetical>
+  <isNegative rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isNegative>
+  <concernsPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</concernsPatient>
+  <hasValueInText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anémie</hasValueInText>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation8">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_free_text20210601-160903"/>
+  <prov:influencer rdf:resource="#FT_4444444444"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#abfd7326-c2f3-11eb-8718-0242ac110002">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0015230"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10015585"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation9"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-09-01"/>
+  <isRelatedToPatient rdf:resource="#2222222222"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">éruption cutanée</rdfs:label>
+  <isHypothetical rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isHypothetical>
+  <isNegative rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isNegative>
+  <concernsPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</concernsPatient>
+  <hasValueInText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">éruption cutanée</hasValueInText>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation9">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_free_text20210601-160903"/>
+  <prov:influencer rdf:resource="#FT_4444444444"/>
+</prov:Generation>
+
+<AbsoluteStartDate rdf:about="#2017-07-20">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AbsoluteStartDate>
+
+<ChemotherapyToxicity rdf:about="#abfea26e-c2f3-11eb-8718-0242ac110002">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0004093"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10003549"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation10"/>
+  <hasGrade rdf:resource="#ac0060cc-c2f3-11eb-8718-0242ac110002"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-07-20"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asthénie</rdfs:label>
+  <isHypothetical rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isHypothetical>
+  <isNegative rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isNegative>
+  <concernsPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</concernsPatient>
+  <hasValueInText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asthénie</hasValueInText>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation10">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_free_text20210601-160903"/>
+  <prov:influencer rdf:resource="#FT_3333333333"/>
+</prov:Generation>
+
+<Grade3 rdf:about="#ac0060cc-c2f3-11eb-8718-0242ac110002">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grade 3</rdfs:label>
+  <isHypothetical rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isHypothetical>
+  <isNegative rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isNegative>
+  <concernsPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</concernsPatient>
+  <hasValueInText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grade 3</hasValueInText>
+</Grade3>
+
+<ChemotherapyToxicity rdf:about="#abff8972-c2f3-11eb-8718-0242ac110002">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0013404"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10040604"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation11"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-07-20"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dyspnée</rdfs:label>
+  <isHypothetical rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isHypothetical>
+  <isNegative rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isNegative>
+  <concernsPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</concernsPatient>
+  <hasValueInText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dyspnée</hasValueInText>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation11">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_free_text20210601-160903"/>
+  <prov:influencer rdf:resource="#FT_3333333333"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#ac005e7e-c2f3-11eb-8718-0242ac110002">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0014591"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10015090"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation12"/>
+  <hasGrade rdf:resource="#ac00619e-c2f3-11eb-8718-0242ac110002"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-07-20"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">épistaxis</rdfs:label>
+  <isHypothetical rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isHypothetical>
+  <isNegative rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isNegative>
+  <concernsPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</concernsPatient>
+  <hasValueInText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">épistaxis</hasValueInText>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation12">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_free_text20210601-160903"/>
+  <prov:influencer rdf:resource="#FT_3333333333"/>
+</prov:Generation>
+
+<Grade4 rdf:about="#ac00619e-c2f3-11eb-8718-0242ac110002">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grade 4</rdfs:label>
+  <isHypothetical rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isHypothetical>
+  <isNegative rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isNegative>
+  <concernsPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</concernsPatient>
+  <hasValueInText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grade 4</hasValueInText>
+</Grade4>
+
+<Grade1 rdf:about="#table_0_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</rdfs:label>
+  <hasValueInTable rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</hasValueInTable>
+</Grade1>
+
+<AbsoluteStartDate rdf:about="#table_0_">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#GradeNull"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:label>
+  <hasValueInTable rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasValueInTable>
+</AbsoluteStartDate>
+
+<ChemotherapyToxicity rdf:about="#table_0_Asthénie">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0004093"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation13"/>
+  <hasGrade rdf:resource="#table_0_1"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-07-17"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asthénie</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asthénie</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation13">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_1111111111_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_0_Anorexie">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0003123"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation14"/>
+  <hasGrade rdf:resource="#table_0_1"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-07-17"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anorexie</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anorexie</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation14">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_1111111111_1"/>
+</prov:Generation>
+
+<Grade0 rdf:about="#table_0_0">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</rdfs:label>
+  <hasValueInTable rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hasValueInTable>
+</Grade0>
+
+<ChemotherapyToxicity rdf:about="#table_0_Mucite">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0333355"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation15"/>
+  <hasGrade rdf:resource="#table_0_0"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-07-17"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mucite</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mucite</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation15">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_1111111111_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_0_Nausées">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0027497"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation16"/>
+  <hasGrade rdf:resource="#table_0_0"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-07-17"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nausées</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nausées</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation16">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_1111111111_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_0_Vomissements">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0042963"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation17"/>
+  <hasGrade rdf:resource="#table_0_0"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-07-17"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vomissements</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vomissements</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation17">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_1111111111_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_0_Epigastralgies">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0042963"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation18"/>
+  <hasGrade rdf:resource="#table_0_0"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-07-17"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epigastralgies</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epigastralgies</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation18">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_1111111111_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_0_Diarrhées">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0011991"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation19"/>
+  <hasGrade rdf:resource="#table_0_0"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-07-17"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diarrhées</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diarrhées</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation19">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_1111111111_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_0_Rash____cutanée">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0015230"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation20"/>
+  <hasGrade rdf:resource="#table_0_0"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-07-17"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rash    cutanée</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rash    cutanée</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation20">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_1111111111_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_0_Syndrome____mains-pieds">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0549410"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation21"/>
+  <hasGrade rdf:resource="#table_0_0"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-07-17"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Syndrome    mains-pieds</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Syndrome    mains-pieds</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation21">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_1111111111_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_0_Pneumopathie____interstitielle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0206061"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation22"/>
+  <hasGrade rdf:resource="#table_0_0"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-07-17"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pneumopathie    interstitielle</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pneumopathie    interstitielle</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation22">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_1111111111_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_0_Infection____/_fièvre">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0015967"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation23"/>
+  <hasGrade rdf:resource="#table_0_0"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-07-17"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Infection    / fièvre</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Infection    / fièvre</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation23">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_1111111111_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_0_HTA____(intercure)">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0020544"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation24"/>
+  <hasGrade rdf:resource="#table_0_0"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-07-17"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HTA    (intercure)</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HTA    (intercure)</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation24">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_1111111111_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_0_Douleurs____(EVA_/10)">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0020544"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation25"/>
+  <hasGrade rdf:resource="#table_0_0"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-07-17"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Douleurs    (EVA /10)</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Douleurs    (EVA /10)</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation25">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_1111111111_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_0_Neuropathie____périphérique">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0442874"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation26"/>
+  <hasGrade rdf:resource="#table_0_"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-07-17"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuropathie    périphérique</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuropathie    périphérique</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation26">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_1111111111_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_0_Troubles____nutritionnels">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C3714509"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation27"/>
+  <hasGrade rdf:resource="#table_0_"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-07-17"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Troubles    nutritionnels</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Troubles    nutritionnels</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation27">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_1111111111_1"/>
+</prov:Generation>
+
+<GradeNull rdf:about="#table_3_">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AbsoluteStartDate"/>
+  <rdf:type rdf:resource="#ChemotherapyToxicity"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0020544"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation42"/>
+  <prov:qualifiedGeneration rdf:resource="#generation43"/>
+  <prov:qualifiedGeneration rdf:resource="#generation44"/>
+  <hasGrade rdf:resource="#table_3_"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-07-20"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasValueInQST>
+  <hasValueInTable rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasValueInTable>
+</GradeNull>
+
+<prov:Generation rdf:about="#generation42">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_3333333333_1"/>
+</prov:Generation>
+
+<prov:Generation rdf:about="#generation43">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_3333333333_1"/>
+</prov:Generation>
+
+<prov:Generation rdf:about="#generation44">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_3333333333_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_3_Asthénie">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0004093"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation28"/>
+  <hasGrade rdf:resource="#table_3_"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-07-20"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asthénie</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asthénie</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation28">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_3333333333_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_3_Anorexie">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0003123"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation29"/>
+  <hasGrade rdf:resource="#table_3_"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-07-20"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anorexie</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anorexie</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation29">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_3333333333_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_3_Mucite">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0333355"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation30"/>
+  <hasGrade rdf:resource="#table_3_"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-07-20"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mucite</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mucite</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation30">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_3333333333_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_3_Nausées">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0027497"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation31"/>
+  <hasGrade rdf:resource="#table_3_"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-07-20"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nausées</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nausées</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation31">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_3333333333_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_3_Vomissements">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0042963"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation32"/>
+  <hasGrade rdf:resource="#table_3_"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-07-20"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vomissements</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vomissements</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation32">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_3333333333_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_3_Epigastralgies">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0042963"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation33"/>
+  <hasGrade rdf:resource="#table_3_"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-07-20"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epigastralgies</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epigastralgies</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation33">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_3333333333_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_3_Diarrhées">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0011991"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation34"/>
+  <hasGrade rdf:resource="#table_3_"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-07-20"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diarrhées</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diarrhées</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation34">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_3333333333_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_3_Constipation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0009806"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation35"/>
+  <hasGrade rdf:resource="#table_3_"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-07-20"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Constipation</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Constipation</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation35">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_3333333333_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_3_Hémorragies____(gingivorragies,_rhinorragies,_rectorragies)">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0267596"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation36"/>
+  <hasGrade rdf:resource="#table_3_"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-07-20"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hémorragies    (gingivorragies, rhinorragies, rectorragies)</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hémorragies    (gingivorragies, rhinorragies, rectorragies)</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation36">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_3333333333_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_3_Rash____cutanée">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0015230"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation37"/>
+  <hasGrade rdf:resource="#table_3_"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-07-20"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rash    cutanée</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rash    cutanée</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation37">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_3333333333_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_3_Syndrome____mains-pieds">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0549410"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation38"/>
+  <hasGrade rdf:resource="#table_3_"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-07-20"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Syndrome    mains-pieds</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Syndrome    mains-pieds</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation38">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_3333333333_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_3_Pneumopathie____interstitielle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0206061"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation39"/>
+  <hasGrade rdf:resource="#table_3_"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-07-20"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pneumopathie    interstitielle</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pneumopathie    interstitielle</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation39">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_3333333333_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_3_Infection____/_fièvre">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0015967"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation40"/>
+  <hasGrade rdf:resource="#table_3_"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-07-20"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Infection    / fièvre</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Infection    / fièvre</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation40">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_3333333333_1"/>
+</prov:Generation>
+
+<ChemotherapyToxicity rdf:about="#table_3_Hypertension____artérielle_(HTA)">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0020544"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation41"/>
+  <hasGrade rdf:resource="#table_3_"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-07-20"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypertension    artérielle (HTA)</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypertension    artérielle (HTA)</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation41">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_tables20210601-160938"/>
+  <prov:influencer rdf:resource="#table_3333333333_1"/>
+</prov:Generation>
+
+<QST_answer rdf:about="#QST_QST:QN_11111_0">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#process_qst20210601-161013"/>
+    </owl:Restriction>
+  </rdf:type>
+  <prov:wasDerivedFrom rdf:resource="#QST_QST:QN_11111"/>
+</QST_answer>
+
+<Grade1 rdf:about="#0_QSTQN11111_Grade_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 1</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 1</hasValueInQST>
+</Grade1>
+
+<AbsoluteStartDate rdf:about="#2016-12-08">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AbsoluteStartDate>
+
+<ChemotherapyToxicity rdf:about="#0_QSTQN11111__02.07_(11111)_Asthénie">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0004093"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10003549"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation45"/>
+  <hasGrade rdf:resource="#0_QSTQN11111_Grade_1"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-12-08"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 02.07 (11111) Asthénie</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 02.07 (11111) Asthénie</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation45">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_qst20210601-161013"/>
+  <prov:influencer rdf:resource="#QST_QST:QN_11111_0"/>
+</prov:Generation>
+
+<QST_answer rdf:about="#QST_QST:QN_22222_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#process_qst20210601-161013"/>
+    </owl:Restriction>
+  </rdf:type>
+  <prov:wasDerivedFrom rdf:resource="#QST_QST:QN_22222"/>
+</QST_answer>
+
+<Grade0 rdf:about="#1_QSTQN22222_Grade_0">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 0</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 0</hasValueInQST>
+</Grade0>
+
+<AbsoluteStartDate rdf:about="#2017-09-15">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AbsoluteStartDate>
+
+<ChemotherapyToxicity rdf:about="#1_QSTQN22222__03.28_(22222)_Diarrhées">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0011991"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10012732"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation46"/>
+  <hasGrade rdf:resource="#1_QSTQN22222_Grade_0"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-09-15"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 03.28 (22222) Diarrhées</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 03.28 (22222) Diarrhées</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation46">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_qst20210601-161013"/>
+  <prov:influencer rdf:resource="#QST_QST:QN_22222_1"/>
+</prov:Generation>
+
+<QST_answer rdf:about="#QST_QST:QN_33333_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#process_qst20210601-161013"/>
+    </owl:Restriction>
+  </rdf:type>
+  <prov:wasDerivedFrom rdf:resource="#QST_QST:QN_33333"/>
+</QST_answer>
+
+<Grade0 rdf:about="#2_QSTQN33333_Grade_0">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 0</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 0</hasValueInQST>
+</Grade0>
+
+<AbsoluteStartDate rdf:about="#2016-11-16">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AbsoluteStartDate>
+
+<ChemotherapyToxicity rdf:about="#2_QSTQN33333__08.15_(33333)_Anémie">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0002871"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10055742"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation47"/>
+  <hasGrade rdf:resource="#2_QSTQN33333_Grade_0"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-11-16"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 08.15 (33333) Anémie</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 08.15 (33333) Anémie</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation47">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_qst20210601-161013"/>
+  <prov:influencer rdf:resource="#QST_QST:QN_33333_2"/>
+</prov:Generation>
+
+<QST_answer rdf:about="#QST_QST:QN_44444_3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#process_qst20210601-161013"/>
+    </owl:Restriction>
+  </rdf:type>
+  <prov:wasDerivedFrom rdf:resource="#QST_QST:QN_44444"/>
+</QST_answer>
+
+<Grade0 rdf:about="#3_QSTQN44444_Grade_0">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 0</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 0</hasValueInQST>
+</Grade0>
+
+<AbsoluteStartDate rdf:about="#2016-11-09">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AbsoluteStartDate>
+
+<ChemotherapyToxicity rdf:about="#3_QSTQN44444__07.92_(44444)_Hématurie">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0018965"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10018867"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation48"/>
+  <hasGrade rdf:resource="#3_QSTQN44444_Grade_0"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-11-09"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 07.92 (44444) Hématurie</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 07.92 (44444) Hématurie</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation48">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_qst20210601-161013"/>
+  <prov:influencer rdf:resource="#QST_QST:QN_44444_3"/>
+</prov:Generation>
+
+<QST_answer rdf:about="#QST_QST:QN_55555_4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#process_qst20210601-161013"/>
+    </owl:Restriction>
+  </rdf:type>
+  <prov:wasDerivedFrom rdf:resource="#QST_QST:QN_55555"/>
+</QST_answer>
+
+<Grade3 rdf:about="#4_QSTQN55555_Grade_3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 3</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 3</hasValueInQST>
+</Grade3>
+
+<ChemotherapyToxicity rdf:about="#4_QSTQN55555__04.38_(55555)_Toux">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0010200"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10011224"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation49"/>
+  <hasGrade rdf:resource="#4_QSTQN55555_Grade_3"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-11-09"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 04.38 (55555) Toux</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 04.38 (55555) Toux</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation49">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_qst20210601-161013"/>
+  <prov:influencer rdf:resource="#QST_QST:QN_55555_4"/>
+</prov:Generation>
+
+<QST_answer rdf:about="#QST_QST:QN_66666_5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#process_qst20210601-161013"/>
+    </owl:Restriction>
+  </rdf:type>
+  <prov:wasDerivedFrom rdf:resource="#QST_QST:QN_66666"/>
+</QST_answer>
+
+<Grade0 rdf:about="#5_QSTQN66666_Grade_0">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 0</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 0</hasValueInQST>
+</Grade0>
+
+<ChemotherapyToxicity rdf:about="#5_QSTQN66666__05.54_(66666)_Dysphonie">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C1527344"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10077002"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation50"/>
+  <hasGrade rdf:resource="#5_QSTQN66666_Grade_0"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-09-15"/>
+  <isRelatedToPatient rdf:resource="#1111111111"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 05.54 (66666) Dysphonie</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 05.54 (66666) Dysphonie</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation50">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_qst20210601-161013"/>
+  <prov:influencer rdf:resource="#QST_QST:QN_66666_5"/>
+</prov:Generation>
+
+<QST_answer rdf:about="#QST_QST:QN_11111_6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#process_qst20210601-161013"/>
+    </owl:Restriction>
+  </rdf:type>
+  <prov:wasDerivedFrom rdf:resource="#QST_QST:QN_11111"/>
+</QST_answer>
+
+<Grade0 rdf:about="#6_QSTQN11111_Grade_0">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 0</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 0</hasValueInQST>
+</Grade0>
+
+<AbsoluteStartDate rdf:about="#2017-08-18">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AbsoluteStartDate>
+
+<ChemotherapyToxicity rdf:about="#6_QSTQN11111__02.07_(11111)_Asthénie">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0004093"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10003549"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation51"/>
+  <hasGrade rdf:resource="#6_QSTQN11111_Grade_0"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-08-18"/>
+  <isRelatedToPatient rdf:resource="#2222222222"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 02.07 (11111) Asthénie</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 02.07 (11111) Asthénie</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation51">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_qst20210601-161013"/>
+  <prov:influencer rdf:resource="#QST_QST:QN_11111_6"/>
+</prov:Generation>
+
+<QST_answer rdf:about="#QST_QST:QN_22222_7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#process_qst20210601-161013"/>
+    </owl:Restriction>
+  </rdf:type>
+  <prov:wasDerivedFrom rdf:resource="#QST_QST:QN_22222"/>
+</QST_answer>
+
+<Grade2 rdf:about="#7_QSTQN22222_Grade_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 2</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 2</hasValueInQST>
+</Grade2>
+
+<ChemotherapyToxicity rdf:about="#7_QSTQN22222__03.28_(22222)_Diarrhées">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0011991"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10012732"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation52"/>
+  <hasGrade rdf:resource="#7_QSTQN22222_Grade_2"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-09-15"/>
+  <isRelatedToPatient rdf:resource="#2222222222"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 03.28 (22222) Diarrhées</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 03.28 (22222) Diarrhées</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation52">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_qst20210601-161013"/>
+  <prov:influencer rdf:resource="#QST_QST:QN_22222_7"/>
+</prov:Generation>
+
+<QST_answer rdf:about="#QST_QST:QN_33333_8">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#process_qst20210601-161013"/>
+    </owl:Restriction>
+  </rdf:type>
+  <prov:wasDerivedFrom rdf:resource="#QST_QST:QN_33333"/>
+</QST_answer>
+
+<Grade0 rdf:about="#8_QSTQN33333_Grade_0">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 0</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 0</hasValueInQST>
+</Grade0>
+
+<ChemotherapyToxicity rdf:about="#8_QSTQN33333__08.15_(33333)_Anémie">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0002871"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10055742"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation53"/>
+  <hasGrade rdf:resource="#8_QSTQN33333_Grade_0"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-08-18"/>
+  <isRelatedToPatient rdf:resource="#2222222222"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 08.15 (33333) Anémie</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 08.15 (33333) Anémie</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation53">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_qst20210601-161013"/>
+  <prov:influencer rdf:resource="#QST_QST:QN_33333_8"/>
+</prov:Generation>
+
+<QST_answer rdf:about="#QST_QST:QN_44444_9">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#process_qst20210601-161013"/>
+    </owl:Restriction>
+  </rdf:type>
+  <prov:wasDerivedFrom rdf:resource="#QST_QST:QN_44444"/>
+</QST_answer>
+
+<Grade0 rdf:about="#9_QSTQN44444_Grade_0">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 0</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 0</hasValueInQST>
+</Grade0>
+
+<ChemotherapyToxicity rdf:about="#9_QSTQN44444__07.92_(44444)_Hématurie">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0018965"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10018867"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation54"/>
+  <hasGrade rdf:resource="#9_QSTQN44444_Grade_0"/>
+  <hasAbsoluteStartDate rdf:resource="#2016-11-09"/>
+  <isRelatedToPatient rdf:resource="#2222222222"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 07.92 (44444) Hématurie</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 07.92 (44444) Hématurie</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation54">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_qst20210601-161013"/>
+  <prov:influencer rdf:resource="#QST_QST:QN_44444_9"/>
+</prov:Generation>
+
+<QST_answer rdf:about="#QST_QST:QN_55555_10">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#process_qst20210601-161013"/>
+    </owl:Restriction>
+  </rdf:type>
+  <prov:wasDerivedFrom rdf:resource="#QST_QST:QN_55555"/>
+</QST_answer>
+
+<Grade4 rdf:about="#10_QSTQN55555_Grade_4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 4</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 4</hasValueInQST>
+</Grade4>
+
+<ChemotherapyToxicity rdf:about="#10_QSTQN55555__04.38_(55555)_Toux">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C0010200"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10011224"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation55"/>
+  <hasGrade rdf:resource="#10_QSTQN55555_Grade_4"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-08-18"/>
+  <isRelatedToPatient rdf:resource="#2222222222"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 04.38 (55555) Toux</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 04.38 (55555) Toux</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation55">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_qst20210601-161013"/>
+  <prov:influencer rdf:resource="#QST_QST:QN_55555_10"/>
+</prov:Generation>
+
+<QST_answer rdf:about="#QST_QST:QN_66666_11">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#process_qst20210601-161013"/>
+    </owl:Restriction>
+  </rdf:type>
+  <prov:wasDerivedFrom rdf:resource="#QST_QST:QN_66666"/>
+</QST_answer>
+
+<Grade0 rdf:about="#11_QSTQN66666_Grade_0">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 0</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade 0</hasValueInQST>
+</Grade0>
+
+<ChemotherapyToxicity rdf:about="#11_QSTQN66666__05.54_(66666)_Dysphonie">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="http://PYM/CUI/C1527344"/>
+  <rdf:type rdf:resource="http://PYM/MDR/10077002"/>
+  <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  <prov:qualifiedGeneration rdf:resource="#generation56"/>
+  <hasGrade rdf:resource="#11_QSTQN66666_Grade_0"/>
+  <hasAbsoluteStartDate rdf:resource="#2017-09-15"/>
+  <isRelatedToPatient rdf:resource="#2222222222"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 05.54 (66666) Dysphonie</rdfs:label>
+  <hasValueInQST rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 05.54 (66666) Dysphonie</hasValueInQST>
+</ChemotherapyToxicity>
+
+<prov:Generation rdf:about="#generation56">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <prov:activity rdf:resource="#process_qst20210601-161013"/>
+  <prov:influencer rdf:resource="#QST_QST:QN_66666_11"/>
+</prov:Generation>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#ChemotherapyToxicity"/>
+    <rdf:Description rdf:about="#Qualifier"/>
+    <rdf:Description rdf:about="#StartDate"/>
+    <rdf:Description rdf:about="#Drug"/>
+    <rdf:Description rdf:about="#Patient"/>
+    <rdf:Description rdf:about="#Grade"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+
+</rdf:RDF>
