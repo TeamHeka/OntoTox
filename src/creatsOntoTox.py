@@ -1,5 +1,9 @@
-import sys
+import sys, yaml
 from owlready2 import *
+from utils_functions import *
+
+with open("config.yml", "r") as ymlfile:
+    cfg = yaml.safe_load(ymlfile)
 
 def main(argv=None):
     
@@ -9,7 +13,7 @@ def main(argv=None):
         try:
             path_owl = argv[argv.index("-p") + 1]
         except ValueError:
-            path_owl = "../owl_files/"
+            path_owl = cfg["outputs"]["owl_files"]
             
     try:
         name_owl = argv[argv.index("--fileName") + 1]
@@ -68,7 +72,15 @@ def main(argv=None):
         class hasValueInText(ChemotherapyToxicity >> str, FunctionalProperty): pass
         class hasValueInQST(ChemotherapyToxicity >> str, FunctionalProperty): pass
         class hasValueInTable(ChemotherapyToxicity >> str, FunctionalProperty): pass
-        class comesFrom(ChemotherapyToxicity >> str, FunctionalProperty): pass
+        
+        # Provenance 
+#         class FreeText(PROVO.Entity): pass
+#         class Table(PROVO.Entity): pass
+#         class QST_answer(PROVO.Entity): pass
+#         class HEGP_CDW(PROVO.Agent): pass
+#         class process_QST(provo.Agent): pass
+#         class process_FT(provo.Agent): pass
+#         class process_Table(provo.Agent): pass
 
 
     onto.save(path_owl + name_owl)
