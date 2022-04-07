@@ -1,0 +1,13 @@
+[
+    {
+        "casesensitive": "yes",
+        "date_modification": "09/03/2020",
+        "id_regexp": "id_grade",
+        "libelle": "Grade",
+        "list_cui": "",
+        "regexp": "[Gg][Rr][Aa][Dd][Ee]\\s*[0-5]*[I|V]*|[Gg]\\s*([[0-5]|(III|IV|II|I|V))",
+        "regexp_exclude": "",
+        "version": "v1"
+    }
+    
+]
