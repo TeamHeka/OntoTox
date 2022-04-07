@@ -1,4 +1,4 @@
-## Quelques notebooks pour mieux comprendre les annotateurs "annotateurTox"
+## Quelques notebooks pour mieux comprendre les annotateurs "annotatorTox"
 
 ### 22-04_install_quickumls_tox_dict
 
@@ -6,7 +6,7 @@ Pour extraire les toxicités, j'ai utilisé QuickUMLS sur un dictionnaires de te
 
 ### 22-04_Stanza_get_started
 
-Un notebook très brouillon, pour comprendre les annotations et le parser de dépendance de Stanza.
+Un notebook très brouillon, pour comprendre les annotations et le parseur de dépendance de Stanza.
 Il permettra peut-être de mieux comprendre l'annotateur pymedext "stanzaAnnotator" (qui a d'ailleurs été plus commenté).
 Des visualisations brat sont générables
 
