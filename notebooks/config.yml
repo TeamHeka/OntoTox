@@ -1,0 +1,16 @@
+data:
+    NR: "../data/narrative_reports/"
+    tables: "../data/tables/TABLES_ex.csv"
+    reports_metadata: "../data/CR_ex.csv"
+    QST: "../data/QST/QST_ex.csv"
+    qst_metadata: "../data/QST/NAME_CHAR.csv"
+outputs:
+    owl_files: "../owl_files/"
+quickumls: "QuickUMLS_data_files/"
+provo: "PROV-O/2021-05-10-provo.owl"
+pymedext_dir: "pymedext_annotators/"
+regex_grade: "pymedext_annotators/regex_grade.json"
+owlready_db: "/rapids/notebooks/host/alice_work/2021_chimioToxDict/src/pymedterminoMDRWHOFRE.sqlite3"
+brat_dirs:
+    toward_tox: "/rapids/notebooks/host/brat/data/22-04_MedKit_OntoTox_rel_toward_tox/"
+    stanza: "/rapids/notebooks/host/brat/data/22-04_MedKit_Stanza"
